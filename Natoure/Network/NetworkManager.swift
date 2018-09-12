@@ -32,13 +32,13 @@ struct NetworkManager {
         
     }
     
-    func getAIC(id:Int, completion: @escaping (_ responseData: AIC?,_ error: String?)->()){
+    func getAIC(id:Int, completion: @escaping (_ responseData: AICData?,_ error: String?)->()){
         router.request(.aic(id: id)) { data, response, error in
             
             let jsonDecoder = JSONDecoder()
             do{
                 let jsonData = try JSONSerialization.data(withJSONObject: data!)
-                let responseData = try jsonDecoder.decode( AIC.self, from: jsonData)
+                let responseData = try jsonDecoder.decode( AICData.self, from: jsonData)
                 
                 completion(responseData,  error as! String?)
                 

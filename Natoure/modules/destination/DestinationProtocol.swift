@@ -16,19 +16,21 @@ protocol DestinationPresenterToViewProtocol: class {
 
 protocol DestinationInteractorToPresenterProtocol: class {
     //func aicListFetched(_ aicList:[AICResume])
-    func aicFetched(_ aic:[AIC])
+    func aicFetched(_ aic:AIC)
     
 }
 
 protocol DestinationPresenterToInteractorProtocol: class {
     var presenter: DestinationInteractorToPresenterProtocol? {get set}
-    func fetchAIC(id:Int)
+    var id: Int? {get set}
+    func fetchAIC()
 }
 
 protocol DestinationViewToPresenterProtocol: class {
     var view: DestinationPresenterToViewProtocol? {get set}
     var interactor: DestinationPresenterToInteractorProtocol? {get set}
     var router: DestinationPresenterToRouterProtocol? {get set}
+    var type: DestinationType?{get set}
     func updateView()
 }
 

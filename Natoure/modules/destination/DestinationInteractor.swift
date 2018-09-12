@@ -11,9 +11,18 @@ import UIKit
 
 class DestinationInteractor:DestinationPresenterToInteractorProtocol{
     var presenter: DestinationInteractorToPresenterProtocol?
+    let networker = NetworkManager()
+    var id: Int?
     
-    func fetchAIC(id: Int) {
-        
+    func fetchAIC() {
+        networker.getAIC(id: id!){ result, error in
+            if error != nil{
+                
+            }else{
+                print(result)
+                self.presenter?.aicFetched((result?.AIC)!)
+            }
+        }
     }
 }
 

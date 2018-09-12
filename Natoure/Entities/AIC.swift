@@ -23,10 +23,10 @@ struct AIC: Codable {
     let communities : String?
     let majorEcosystem : String
     let addressIndications : String
-    let tempMin : Int?
-    let tempMax : Int?
-    let altitudeMin : Double?
-    let altitudeMax : Double?
+    let tempMin : Float?
+    let tempMax : Float?
+    let altitudeMin : Float?
+    let altitudeMax : Float?
     let logo : Picture?
     let video : Picture?
     let preview : Picture?
@@ -165,7 +165,7 @@ struct Project: Codable {
     let name : String
     let aicID : Int
     let achievements : String
-    let cover : String?
+    let cover : Cover?
     let status : String
     
     private enum CodingKeys: String, CodingKey {
@@ -176,5 +176,9 @@ struct Project: Codable {
         case cover
         case status
     }
+}
+
+struct Cover: Codable {
+    
 }
 

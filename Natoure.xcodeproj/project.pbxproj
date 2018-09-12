@@ -65,7 +65,6 @@
 		96E9065720E5B3BB008D35A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E9065520E5B3BB008D35A3 /* LaunchScreen.storyboard */; };
 		96E9066220E5B3BB008D35A3 /* NatoureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E9066120E5B3BB008D35A3 /* NatoureTests.swift */; };
 		96E9066D20E5B3BB008D35A3 /* NatoureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E9066C20E5B3BB008D35A3 /* NatoureUITests.swift */; };
-		96E9067F20E5B4F8008D35A3 /* Conekta in Resources */ = {isa = PBXBuildFile; fileRef = 96E9067E20E5B4F8008D35A3 /* Conekta */; };
 		96E9068220E5B645008D35A3 /* SwiftGift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E9068120E5B645008D35A3 /* SwiftGift.swift */; };
 		96E9068720E5B652008D35A3 /* MapListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E9068320E5B651008D35A3 /* MapListVC.swift */; };
 		96E9068820E5B652008D35A3 /* LoaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E9068420E5B651008D35A3 /* LoaderVC.swift */; };
@@ -250,7 +249,6 @@
 		96E9066820E5B3BB008D35A3 /* NatoureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NatoureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E9066C20E5B3BB008D35A3 /* NatoureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NatoureUITests.swift; sourceTree = "<group>"; };
 		96E9066E20E5B3BB008D35A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		96E9067E20E5B4F8008D35A3 /* Conekta */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Conekta; sourceTree = "<group>"; };
 		96E9068120E5B645008D35A3 /* SwiftGift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftGift.swift; sourceTree = "<group>"; };
 		96E9068320E5B651008D35A3 /* MapListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapListVC.swift; sourceTree = "<group>"; };
 		96E9068420E5B651008D35A3 /* LoaderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderVC.swift; sourceTree = "<group>"; };
@@ -528,7 +526,6 @@
 			children = (
 				9666A0FC212CE91000344900 /* modules */,
 				96E9068020E5B633008D35A3 /* UI */,
-				96E9067E20E5B4F8008D35A3 /* Conekta */,
 				96E9067D20E5B46F008D35A3 /* Views */,
 				96E9067C20E5B468008D35A3 /* Entities */,
 				96E9067B20E5B45F008D35A3 /* Network */,
@@ -902,7 +899,6 @@
 				96E9071420F149AD008D35A3 /* SCUBADIVING_pin.png in Resources */,
 				96FCDFA120FF5C9D00E9D545 /* SUPPLY_service_icon.png in Resources */,
 				96E906A920E5C7C5008D35A3 /* filtro_icono.png in Resources */,
-				96E9067F20E5B4F8008D35A3 /* Conekta in Resources */,
 				96E9071F20F149AD008D35A3 /* FREEDIVING_pin.png in Resources */,
 				96E9070B20F149AD008D35A3 /* ARCHEOLOGY_pin.png in Resources */,
 				96E9073220F149AD008D35A3 /* BIRDSSIGHTING_pin.png in Resources */,

@@ -12,6 +12,8 @@ class DestinationVC: UIViewController {
     var presenter:DestinationViewToPresenterProtocol?
     var type:DestinationType?
     
+    var destinations:[UIViewController] = []
+    
     override func viewDidLoad() {
         presenter?.updateView()
     }
@@ -21,7 +23,10 @@ class DestinationVC: UIViewController {
 
 extension DestinationVC:DestinationPresenterToViewProtocol{
     func presentAIC(_ aic: AIC) {
-        
+        let aicVC = UIStoryboard(name:"Main",bundle: Bundle.main).instantiateViewController(withIdentifier: "AICDetail") as? AICVC
+        self.view.addSubview((aicVC?.view)!)
+        //var aicVC = AICDetail
+        //print(aic)
     }
     
     

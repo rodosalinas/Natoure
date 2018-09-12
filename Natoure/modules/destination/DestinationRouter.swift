@@ -32,6 +32,8 @@ class DestinationRouter: DestinationPresenterToRouterProtocol{
         presenter.view = view
         presenter.router = router
         presenter.interactor = interactor
+        presenter.type = type
+        interactor.id = id
         interactor.presenter = presenter
         //interactor.type = type != nil ? type : .aic
         

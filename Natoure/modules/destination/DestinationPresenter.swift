@@ -13,16 +13,24 @@ class DestinationPresenter: DestinationViewToPresenterProtocol {
     
     var router: DestinationPresenterToRouterProtocol?
     
+    var type: DestinationType?
+    
     func updateView() {
-        //interactor?.fetchAIC(id: <#T##Int#>)
+        
+        switch type! {
+        case .aic:
+            interactor?.fetchAIC()
+        default:
+            break
+        }
     }
     
     
 }
 
 extension DestinationPresenter: DestinationInteractorToPresenterProtocol{
-    func aicFetched(_ aic: [AIC]) {
-        
+    func aicFetched(_ aic: AIC) {
+        view?.presentAIC(aic)
     }
     
     
