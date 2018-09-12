@@ -2391,10 +2391,10 @@
             </objects>
             <point key="canvasLocation" x="2975" y="781"/>
         </scene>
-        <!--AICVC-->
+        <!--DetailVC-->
         <scene sceneID="iLB-kp-dBD">
             <objects>
-                <viewController storyboardIdentifier="AICDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EXK-N3-Khu" customClass="AICVC" customModule="Natoure" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AICDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EXK-N3-Khu" customClass="AICDetailVC" customModule="Natoure" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N7Q-bX-4BH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2405,6 +2405,17 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6f6-bk-6vU">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1980"/>
                                         <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0S-Ec-UsP">
+                                                <rect key="frame" x="20" y="20" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="gnk-Pu-vF6"/>
+                                                    <constraint firstAttribute="width" constant="20" id="hmI-k3-gUj"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="back.png"/>
+                                                <connections>
+                                                    <action selector="backPressed:" destination="EXK-N3-Khu" eventType="touchUpInside" id="J95-Nr-0Ce"/>
+                                                </connections>
+                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCS-wL-nku">
                                                 <rect key="frame" x="30" y="274" width="315" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
@@ -2643,14 +2654,28 @@
                                                 <color key="textColor" red="1" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4IR-cZ-oTD">
+                                                <rect key="frame" x="45" y="13.5" width="69" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Regresar">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="backPressed:" destination="EXK-N3-Khu" eventType="touchUpInside" id="7Kb-Mr-vt1"/>
+                                                    <action selector="dismissView:" destination="vl9-1s-WkU" eventType="touchUpInside" id="lUe-pl-vCM"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.086274509803921567" green="0.12549019607843137" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="10E-ZH-7ti" firstAttribute="centerX" secondItem="6f6-bk-6vU" secondAttribute="centerX" constant="45" id="0c3-ea-Hpj"/>
                                             <constraint firstItem="q0M-Fi-PJp" firstAttribute="top" secondItem="bPA-rh-2Fg" secondAttribute="bottom" constant="30" id="0oU-Hm-hXA"/>
+                                            <constraint firstItem="4IR-cZ-oTD" firstAttribute="centerY" secondItem="A0S-Ec-UsP" secondAttribute="centerY" id="12A-U4-Jkw"/>
                                             <constraint firstItem="7bb-9d-e6i" firstAttribute="leading" secondItem="zfN-Q2-Esp" secondAttribute="trailing" constant="-22" id="1Tb-EU-lw4"/>
                                             <constraint firstItem="PfJ-yZ-E02" firstAttribute="centerY" secondItem="DX8-8c-iuF" secondAttribute="centerY" id="1Yo-wv-HZr"/>
                                             <constraint firstItem="zfN-Q2-Esp" firstAttribute="leading" secondItem="l73-lV-WXl" secondAttribute="trailing" id="2sO-8t-SMI"/>
+                                            <constraint firstItem="4IR-cZ-oTD" firstAttribute="leading" secondItem="A0S-Ec-UsP" secondAttribute="trailing" constant="5" id="3iN-CX-t6F"/>
+                                            <constraint firstItem="A0S-Ec-UsP" firstAttribute="top" secondItem="6f6-bk-6vU" secondAttribute="top" constant="20" id="4EE-uf-auI"/>
                                             <constraint firstItem="DbM-ST-cJv" firstAttribute="leading" secondItem="Dkz-bn-Kn5" secondAttribute="trailing" constant="-2" id="675-LE-4gM"/>
                                             <constraint firstItem="gJU-MT-TNq" firstAttribute="top" secondItem="Dkz-bn-Kn5" secondAttribute="bottom" constant="-29" id="6Bg-qk-BGj"/>
                                             <constraint firstAttribute="trailing" secondItem="9ZA-Id-hJa" secondAttribute="trailing" constant="30" id="6uE-zy-pv1"/>
@@ -2660,6 +2685,7 @@
                                             <constraint firstItem="1a1-c2-yOm" firstAttribute="centerX" secondItem="4Uj-eX-78r" secondAttribute="centerX" id="8ZP-Ue-kyF"/>
                                             <constraint firstItem="DbM-ST-cJv" firstAttribute="centerY" secondItem="gJU-MT-TNq" secondAttribute="centerY" id="8mY-SZ-WER"/>
                                             <constraint firstItem="KQj-up-axO" firstAttribute="leading" secondItem="6f6-bk-6vU" secondAttribute="leading" constant="30" id="98v-Dj-ot4"/>
+                                            <constraint firstItem="A0S-Ec-UsP" firstAttribute="leading" secondItem="6f6-bk-6vU" secondAttribute="leading" constant="20" id="9kl-jc-KAo"/>
                                             <constraint firstItem="KQj-up-axO" firstAttribute="top" secondItem="9ZA-Id-hJa" secondAttribute="bottom" constant="40" id="ACk-8G-l2W"/>
                                             <constraint firstItem="Dkz-bn-Kn5" firstAttribute="leading" secondItem="gJU-MT-TNq" secondAttribute="trailing" id="AZJ-C0-pOI"/>
                                             <constraint firstItem="9ZA-Id-hJa" firstAttribute="leading" secondItem="6f6-bk-6vU" secondAttribute="leading" constant="30" id="Aii-Hz-la8"/>
@@ -2758,20 +2784,10 @@
                     </view>
                     <size key="freeformSize" width="375" height="2000"/>
                     <connections>
-                        <outlet property="abrev" destination="Bqz-4i-Dmk" id="p7x-jj-zt7"/>
-                        <outlet property="adminName" destination="mZr-3i-GZ2" id="tww-wR-fYW"/>
-                        <outlet property="cityName" destination="Trh-on-RaI" id="chL-Mq-Zjz"/>
-                        <outlet property="communities" destination="2Ev-Z6-x5e" id="jIE-Sh-WW1"/>
-                        <outlet property="feeLabel" destination="3Y2-fI-b9V" id="ASc-Gm-AaV"/>
-                        <outlet property="majorEcoSystems" destination="9ZA-Id-hJa" id="AVb-tq-Gyx"/>
-                        <outlet property="maxAlt" destination="WcH-pL-ES3" id="6Ui-cU-SdE"/>
-                        <outlet property="maxTemp" destination="DbM-ST-cJv" id="BAR-AJ-cdP"/>
-                        <outlet property="minAlt" destination="l73-lV-WXl" id="aPD-b1-pRd"/>
-                        <outlet property="minTemp" destination="gJU-MT-TNq" id="2wS-YM-AVN"/>
-                        <outlet property="name" destination="GCS-wL-nku" id="ZE5-1d-Uqt"/>
-                        <outlet property="priorityProjectLabel" destination="yhE-Sg-eHJ" id="OB1-6m-A6a"/>
-                        <outlet property="rulesLabel" destination="JJR-Fx-7ZC" id="DHU-jz-c3x"/>
-                        <outlet property="scrollView" destination="Hyx-S0-8fD" id="mdy-aB-YU2"/>
+                        <outlet property="acronim" destination="Bqz-4i-Dmk" id="PqD-Pv-oyz"/>
+                        <outlet property="aicLogo" destination="HCT-Bc-1La" id="eug-US-1jF"/>
+                        <outlet property="aicName" destination="GCS-wL-nku" id="oTj-u1-t3e"/>
+                        <outlet property="aicType" destination="mZr-3i-GZ2" id="XoS-l4-fmk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YUb-h3-5T8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2799,6 +2815,7 @@
                                 <state key="normal" image="explora_natoure_btn_home.png"/>
                                 <connections>
                                     <action selector="backToMenu:" destination="aBZ-AX-bPb" eventType="touchUpInside" id="6fQ-d1-wH7"/>
+                                    <action selector="dismissView:" destination="aBZ-AX-bPb" eventType="touchUpInside" id="cqw-cq-98M"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNU-wI-7F1">

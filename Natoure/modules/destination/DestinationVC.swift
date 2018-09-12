@@ -23,10 +23,24 @@ class DestinationVC: UIViewController {
 
 extension DestinationVC:DestinationPresenterToViewProtocol{
     func presentAIC(_ aic: AIC) {
-        let aicVC = UIStoryboard(name:"Main",bundle: Bundle.main).instantiateViewController(withIdentifier: "AICDetail") as? AICVC
-        self.view.addSubview((aicVC?.view)!)
+        let aicVC = UIStoryboard(name:"Main",bundle: Bundle.main).instantiateViewController(withIdentifier: "AICDetailVC") as? AICDetailVC
+        aicVC!.aic = aic
+        aicVC!.parentVC = self
+        destinations.append(aicVC!)
+        
+        self.view.addSubview(destinations[destinations.count - 1].view!)
         //var aicVC = AICDetail
         //print(aic)
+    }
+    
+    
+}
+
+extension DestinationVC:DestinationChildToParentProtocol{
+    func backPressed() {
+        if destinations.count == 1{
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     
